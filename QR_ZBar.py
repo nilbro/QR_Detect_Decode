@@ -28,11 +28,8 @@ def border_display(img, decodedCodes):
   cv2.waitKey(0);
 
 #read image
-image = cv2.imread('sample.jpg')
+image = cv2.imread('sample7.jpg')
 #cv2.imshow('QR',image)
 #cv2.waitKey(0)
 decodedCodes = pyzbar.decode(image)
-for decodedObject in decodedCodes:
-    print('Type : ', decodedObject.type)
-    print('Data : ', decodedObject.data,'\n')
-#border_display(image,decodedCodes)
+border_display(image,decodedCodes)
